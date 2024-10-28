@@ -1,0 +1,5 @@
+@font-face { font-family: Mystery_Quest; src: url(../Mystery_Quest/MysteryQuest-Regular.ttf);}
+.title_style {
+    background-image: linear-gradient(#0dcaf0, #ffc0cb);
+    font-family: Mystery_Quest, sans-serif;
+}
