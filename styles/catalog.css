@@ -2,7 +2,7 @@
     max-width: 18rem;
     height: 13rem;
     background-color: #fff;
-    
+
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
     transition: 0.3s ease-in-out;
 }
@@ -26,11 +26,6 @@
     z-index: 1;
 }
 
-.c-container .card .image img {
-    /* max-width: 100%; */
-    /* border-radius: 15px; */
-}
-
 .c-container .card .content {
     position: relative;
     top: -140px;
@@ -47,4 +42,8 @@
     visibility: visible;
     opacity: 1;
     transition-delay: 0.2s;
+}
+
+.section_style {
+    background-color: #bdc2d5 !important;
 }
