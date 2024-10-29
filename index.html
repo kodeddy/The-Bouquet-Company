@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./styles/catalog.css">
 </head>
 
-<body class="bg-info">
+<body>
     <div class="container-fluid p-3 text-center title_style sticky-top">
         <h1 class="p-2 container">The Bouquet Company</h1>
     </div>
@@ -20,7 +20,7 @@
     <div class="mt-5 mx-5">
         <h2 class="text-center">Available Bouquets</h2>
 
-        <section class=" container mb-5 w-auto section_style">
+        <section class=" container mb-5 w-auto section_style rounded-5">
             <!-- Div contains the cards for both Red & Pink Roses. -->
             <div
                 class="c-container container flex-wrap row position-relative align-items-center justify-content-center p-4 d-block d-md-flex">
@@ -78,7 +78,108 @@
         </section>
     </div>
 
-    
+    <div>
+        <h2 class="text-center">Our Reviews</h2>
+
+        <section class=" container mb-5 w-auto section_style rounded-5">
+            <!-- Modal Div -->
+            <div
+                class="container flex-wrap row position-relative align-items-center justify-content-center p-4 d-block d-md-flex">
+
+                <!-- Div carrying Bob's Review -->
+                <div class="card col position-relative bg-secondary m-5 ms-0 p-1 m-sm-5">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#bobReview">
+                        <img src="./images/pikachu.jpg" class="card-img-top" alt="...">
+                    </button>
+                    <div class="card-body">
+                        <p class="card-text text-center">Bob</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="bobReview" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Bob's Review</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">"Fast and easy ordering and delivery!"</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Div carrying Sally's Review -->
+                <div class="card col position-relative bg-secondary m-5 ms-0 p-1 m-sm-5">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#sallyReview">
+                        <img src="./images/pikachu.jpg" class="card-img-top" alt="...">
+                    </button>
+                    <div class="card-body">
+                        <p class="card-text text-center">Sally</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="sallyReview" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Sally's Review</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">"The sweetest flower shop in Auburn. They are great!"</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Div carrying Andi's Review -->
+                <div class="card col position-relative bg-secondary m-5 ms-0 p-1 m-sm-5">
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                        <img src="./images/pikachu.jpg" class="card-img-top" alt="...">
+                    </button>
+                    <div class="card-body">
+                        <p class="card-text text-center">Andi</p>
+                    </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Andi's Review</h1>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-center">"Beautiful flowers for my birthday"</p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="./bootstrap-5.3.3-dist/js/bootstrap.min.js"></script>
 </body>
 
 </html>
