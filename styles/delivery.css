@@ -1,0 +1,7 @@
+.subtitle_style {
+    background-image: linear-gradient(#ffc0cb, #0dcaf0);
+}
+
+#receiver {
+    visibility: visible !important;
+}

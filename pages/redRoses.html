@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bouquet Delivery || Red Roses</title>
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/index.css">
+    <link rel="stylesheet" href="../styles/catalog.css">
+    <link rel="stylesheet" href="../styles/delivery.css">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="container-fluid p-3 text-center title_style">
+        <h1 class="p-2 container">The Bouquet Company</h1>
+    </div>
+    <!-- Buyer's Details -->
+    <div class="container-fluid p-3 text-center subtitle_style w-50 rounded-5 text-break mb-4" id="buyer">
+        <h2 class="p-2 container">Buyer's Details</h2>
+        <form class="row g-3" id="buyerForm">
+            <!-- Flower Name -->
+            <div class="col-12">
+                <p type="text" class="form-control shadow-none text-center bg-transparent border-0" id="flowerName">
+                    Red Roses</p>
+            </div>
+            <!-- First name -->
+            <div class="col-md-6">
+                <label for="firstNameValidation" class="form-label">First name</label>
+                <input type="text" class="form-control shadow-none" id="firstNameValidation" required="" />
+            </div>
+            <!-- Last Name -->
+            <div class="col-md-6">
+                <label for="timeValidation" class="form-label">Last name</label>
+                <input type="text" class="form-control shadow-none" id="timeValidation" required="" />
+            </div>
+            <!-- Phone Number -->
+            <div class="col-md-6">
+                <label for="numberValidation" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control shadow-none" id="numberValidation" required
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="12" placeholder="123-456-7890" />
+            </div>
+            <!-- Email -->
+            <div class="col-md-6">
+                <label for="emailValidation" class="form-label">Email</label>
+                <div class="input-group has-validation">
+                    <span class="input-group-text" id="inputGroupPrepend3">@</span>
+                    <input type="email" class="form-control shadow-none" id="emailValidation" required="" />
+                </div>
+            </div>
+            <!-- Address -->
+            <div class="col-md-3">
+                <label for="addressValidation" class="form-label">Address</label>
+                <input type="text" class="form-control shadow-none" id="addressValidation" required="" />
+            </div>
+            <!-- City -->
+            <div class="col-md-3">
+                <label for="cityValidation" class="form-label">City</label>
+                <input type="text" class="form-control shadow-none" id="cityValidation" required="" />
+            </div>
+            <!-- State -->
+            <div class="col-md-3">
+                <label for="stateChoice" class="form-label">State</label>
+                <select class="form-select" id="stateChoice" required="">
+                    <option selected="" disabled="" value=""></option>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Hawaii</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maine</option>
+                    <option>Maryland</option>
+                    <option>Massachusetts</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>New York</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Vermont</option>
+                    <option>Virginia</option>
+                    <option>Washington</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
+                    <option>District of Columbia</option>
+                    <option>American Samoa</option>
+                    <option>Guam</option>
+                    <option>Northern Mariana Islands</option>
+                    <option>Puerto Rico</option>
+                    <option>United States Minor Outlying Islands</option>
+                    <option>Virgin Islands, U.S.</option>
+                </select>
+            </div>
+            <!-- Zip -->
+            <div class="col-md-3">
+                <label for="zipValidation" class="form-label">Zip</label>
+                <input type="text" class="form-control shadow-none" id="zipValidation" required="" pattern="[0-9]{5}"
+                    maxlength="5" />
+            </div>
+            <!-- Terms & Conditions -->
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="correctInfoCheck" required="" />
+                    <label class="form-check-label" for="correctInfoCheck">
+                        All information entered is correct.
+                    </label>
+                </div>
+            </div>
+            <!-- Continue -->
+            <div class="col-6">
+                <button class="btn btn-secondary" type="submit" onclick="checkBuyerValidation(event)">Continue</button>
+            </div>
+            <!-- Cancel -->
+            <div class="col-6">
+                <button class="btn btn-secondary" type="submit" onclick="window.close()">Close</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Receiver Question -->
+    <div class="container-fluid p-3 text-center subtitle_style w-50 rounded-5 text-break mb-4" hidden id="question">
+        <h4 class="container">Are you also the receiver?</h4>
+
+        <form class="row g-3">
+            <!-- Yes -->
+            <div class="col-6">
+                <button class="btn btn-secondary" type="button"
+                    onclick="document.getElementById('receiver').setAttribute('hidden', ''), document.getElementById('delivery').removeAttribute('hidden')">Yes</button>
+            </div>
+            <!-- No -->
+            <div class="col-6">
+                <button class="btn btn-secondary" type="button"
+                    onclick="document.getElementById('receiver').removeAttribute('hidden'), document.getElementById('delivery').setAttribute('hidden', '')">No</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Receiver's Details -->
+    <div class="container-fluid p-3 text-center subtitle_style w-50 rounded-5 text-break mb-4" hidden id="receiver">
+        <h2 class="p-2 container">Receiver's Details</h2>
+        <form class="row g-3" id="receiverForm">
+            <!-- First name -->
+            <div class="col-md-6">
+                <label for="rFirstNameValidation" class="form-label">First name</label>
+                <input type="text" class="form-control shadow-none" id="rFirstNameValidation" required="" />
+            </div>
+            <!-- Last Name -->
+            <div class="col-md-6">
+                <label for="rtimeValidation" class="form-label">Last name</label>
+                <input type="text" class="form-control shadow-none" id="rtimeValidation" required="" />
+            </div>
+            <!-- Address -->
+            <div class="col-md-3">
+                <label for="rAddressValidation" class="form-label">Address</label>
+                <input type="text" class="form-control shadow-none" id="rAddressValidation" required="" />
+            </div>
+            <!-- City -->
+            <div class="col-md-3">
+                <label for="rCityValidation" class="form-label">City</label>
+                <input type="text" class="form-control shadow-none" id="rCityValidation" required="" />
+            </div>
+            <!-- State -->
+            <div class="col-md-3">
+                <label for="rStateChoice" class="form-label">State</label>
+                <select class="form-select" id="rStateChoice" required="">
+                    <option selected="" disabled="" value=""></option>
+                    <option>Alabama</option>
+                    <option>Alaska</option>
+                    <option>Arizona</option>
+                    <option>Arkansas</option>
+                    <option>California</option>
+                    <option>Colorado</option>
+                    <option>Connecticut</option>
+                    <option>Delaware</option>
+                    <option>Florida</option>
+                    <option>Georgia</option>
+                    <option>Hawaii</option>
+                    <option>Idaho</option>
+                    <option>Illinois</option>
+                    <option>Indiana</option>
+                    <option>Iowa</option>
+                    <option>Kansas</option>
+                    <option>Kentucky</option>
+                    <option>Louisiana</option>
+                    <option>Maine</option>
+                    <option>Maryland</option>
+                    <option>Massachusetts</option>
+                    <option>Michigan</option>
+                    <option>Minnesota</option>
+                    <option>Mississippi</option>
+                    <option>Missouri</option>
+                    <option>Montana</option>
+                    <option>Nebraska</option>
+                    <option>Nevada</option>
+                    <option>New Hampshire</option>
+                    <option>New Jersey</option>
+                    <option>New Mexico</option>
+                    <option>New York</option>
+                    <option>North Carolina</option>
+                    <option>North Dakota</option>
+                    <option>Ohio</option>
+                    <option>Oklahoma</option>
+                    <option>Oregon</option>
+                    <option>Pennsylvania</option>
+                    <option>Rhode Island</option>
+                    <option>South Carolina</option>
+                    <option>South Dakota</option>
+                    <option>Tennessee</option>
+                    <option>Texas</option>
+                    <option>Utah</option>
+                    <option>Vermont</option>
+                    <option>Virginia</option>
+                    <option>Washington</option>
+                    <option>West Virginia</option>
+                    <option>Wisconsin</option>
+                    <option>Wyoming</option>
+                    <option>District of Columbia</option>
+                    <option>American Samoa</option>
+                    <option>Guam</option>
+                    <option>Northern Mariana Islands</option>
+                    <option>Puerto Rico</option>
+                    <option>United States Minor Outlying Islands</option>
+                    <option>Virgin Islands, U.S.</option>
+                </select>
+            </div>
+            <!-- Zip -->
+            <div class="col-md-3">
+                <label for="rZipValidation" class="form-label">Zip</label>
+                <input type="text" class="form-control shadow-none" id="rZipValidation" required="" pattern="[0-9]{5}"
+                    maxlength="5" />
+            </div>
+            <!-- Correct Info -->
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="rCorrectInfoCheck" required="" />
+                    <label class="form-check-label" for="rCorrectInfoCheck">
+                        All information entered is correct.
+                    </label>
+                </div>
+            </div>
+            <!-- Continue -->
+            <div class="col-12">
+                <button class="btn btn-secondary" type="submit"
+                    onclick="checkReceiverValidation(event)">Continue</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Delivery Details -->
+    <div class="container-fluid p-3 text-center subtitle_style w-50 rounded-5 text-break mb-4" hidden id="delivery">
+        <h2 class="p-2 container">Delivery Details</h2>
+        <form class="row g-3" id="deliveryForm">
+            <!-- Date -->
+            <div class="col-md-6">
+                <label for="dateValidation" class="form-label">Date</label>
+                <input type="date" class="form-control shadow-none" id="dateValidation" required>
+            </div>
+            <!-- Time -->
+            <div class="col-md-6">
+                <label for="timeValidation" class="form-label">Preferred Time</label>
+                <input type="time" class="form-control shadow-none" id="timeValidation">
+            </div>
+            <!-- Note -->
+            <div class="col-md-12">
+                <label for="noteValidation" class="form-label">Note</label>
+                <input type="text" class="form-control shadow-none" id="noteValidation">
+            </div>
+            <!-- Correct Info -->
+            <div class="col-12">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="correctInfoCheck" required>
+                    <label class="form-check-label" for="correctInfoCheck">
+                        All information entered is correct.
+                    </label>
+                </div>
+            </div>
+            <!-- Buy Amount -->
+            <div class="col-md-6">
+                <label for="buyAmount" class="form-label">Quantity</label>
+                <input type="number" class="form-control shadow-none" id="buyAmount" min="1" required
+                    oninput="multiplyValue()">
+            </div>
+            <!-- Final Amount -->
+            <div class="col-md-6">
+                <label for="finalAmount" class="form-label">Final Price</label><br>
+                <p>$<span id="result">0</span></p>
+            </div>
+            <!-- Confirm -->
+            <div class="col-6">
+                <button class="btn btn-secondary" type="submit" id="confirmButton"
+                    onclick="pageValidation(event)">Confirm</button>
+            </div>
+            <!-- Cancel -->
+            <div class="col-6">
+                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#cancelOrder"
+                    type="button">Cancel</button>
+            </div>
+            <!-- Cancel's Modal -->
+            <div class="modal fade container-fluid" id="cancelOrder" data-bs-backdrop="static" data-bs-keyboard="false"
+                tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="staticBackdropLabel">Cancel order and close page?</h1>
+                        </div>
+                        <div class="modal-body row">
+                            <div class="col-6">
+                                <button class="btn btn-secondary" data-bs-toggle="modal" type="button"
+                                    onclick="window.close()">Yes</button>
+                            </div>
+                            <div class=" col-6">
+                                <button class="btn btn-secondary" data-bs-toggle="modal" data-bs-dismiss="modal"
+                                    type="button">Wait, go back !!</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Order Complete -->
+    <div class="container-fluid p-3 text-center subtitle_style w-50 rounded-5 text-break mb-4" hidden
+        id="orderComplete">
+        <h4>Order Complete!</h4>
+        <br>
+        <h4>Please close this page</h4>
+    </div>
+
+
+    <script>
+        const redRose = 24.99;
+
+        function multiplyValue() {
+            // Get the input value and convert to a number
+            const buyAmount = parseFloat(document.getElementById("buyAmount").value); // Calculate the result const
+            result = buyAmount * redRose; // Display the result
+            document.getElementById("result").innerText = isNaN(result) ? "0.00" : result.toFixed(2);
+        }
+    </script>
+    <script defer src="https://unpkg.com/verifalia-widget@1.12.1/dist/verifalia-widget.js"
+        data-verifalia-appkey="0b9c0ee04d764ec9b8b70f96c33759ca"
+        integrity="sha512-aB55H3kqhS/HI+jQ9YHfs/9Ulxcyea0DkPV/3g0J89iHHquhB5CctTq48xkuGjGMzHG7w6SrfCacoKQKwErP3w=="
+        crossorigin="anonymous"></script>;
+    <script src="../scripts/delivery.js"></script>
+    <script src="../bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
